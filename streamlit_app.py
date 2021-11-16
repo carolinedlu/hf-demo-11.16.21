@@ -19,7 +19,8 @@ def read_file(filename):
 path_to_file = st.secrets.BUCKET_NAME + "/HelloFreshExample - SampleData.csv"
 st.write(path_to_file)
 
-# content = read_file(path_to_file)
+content = read_file(path_to_file)
+st.write(content)
 
 # # Print results.
 # st.subheader("Read data from CSV file:")
