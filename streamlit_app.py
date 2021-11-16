@@ -17,10 +17,12 @@ def read_file(filename):
         return f.read().decode("utf-8")
 
 path_to_file = st.secrets.BUCKET_NAME + "/HelloFreshExample - SampleData.csv"
+st.write(path_to_file)
+
 content = read_file(path_to_file)
 
-# Print results.
-st.subheader("Read data from CSV file:")
-for line in content.strip().split("\n")[1:]:
-    first_name, last_name, dietary_restrictions, fave_ingredient = line.split(",")
-    st.write(f"{first_name} {last_name}'s favorite ingredient is {fave_ingredient}.")
+# # Print results.
+# st.subheader("Read data from CSV file:")
+# for line in content.strip().split("\n")[1:]:
+#     first_name, last_name, dietary_restrictions, fave_ingredient = line.split(",")
+#     st.write(f"{first_name} {last_name}'s favorite ingredient is {fave_ingredient}.")
